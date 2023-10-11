@@ -17,7 +17,7 @@ namespace startup.Components
             var listofPost = (from p in _context.Posts
                               where (p.IsActive == true) && (p.Status == 1)
                               orderby p.PostID descending
-                              select p).Take(3).ToList();
+                              select p).Take(4).ToList();
             return await Task.FromResult((IViewComponentResult)View("Default", listofPost));
         }
     }
