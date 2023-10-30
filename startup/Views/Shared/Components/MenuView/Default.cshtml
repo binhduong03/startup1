@@ -17,7 +17,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">   
-                @foreach (var menu in Model.Where(m=>m.Levels == 1).OrderBy(n=>n.MenuOrder))
+            @foreach (var menu in Model.Where(m=>m.Levels == 1).OrderBy(n=>n.MenuOrder))
             {
                     var Pid = menu.MenuID;
                     string url = Functions.TitleSlugGeneration("list", menu.MenuName, menu.MenuID);
